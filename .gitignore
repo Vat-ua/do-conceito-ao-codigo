@@ -1,0 +1,12 @@
+node_modules/
+dist/
+tmp/
+
+.env
+.env.*
+!.env.example
+
+.DS_Store
+AGENTS.md
+
+*.log
