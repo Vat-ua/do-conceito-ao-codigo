@@ -88,9 +88,7 @@ export default function AboutDialog() {
             </ul>
 
             <p className="about-dialog-note">
-              Compartilhe dúvidas, soluções e descobertas pelo caminho.
-              A ideia é trocar experiências, aprender juntos e ajudar
-              quando puder — sem cobranças e sem que isso vire mais uma obrigação.
+              Aprender fazendo, experimentar ideias e ver um projeto evoluir junto com o que você aprende.
             </p>
           </div>
         </div>
