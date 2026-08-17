@@ -22,18 +22,18 @@ export default function HeroSection() {
       </div>
 
       <div className="hero-content container">
-        <Reveal>
+        <Reveal revealOnMount>
           <p className="eyebrow">Aprender na prática: do Zero ao React</p>
         </Reveal>
 
-        <Reveal delay={100}>
+        <Reveal delay={100} revealOnMount>
           <h1 className="hero-title">
             Um produto, <span className="accent italic">duas</span> <br />
             implementações
           </h1>
         </Reveal>
 
-        <Reveal delay={200}>
+        <Reveal delay={200} revealOnMount>
           <p className="hero-lead">
             Em vez de exercícios soltos, vamos criar{" "}
             <span className="text-strong">um produto real</span> desde o início
@@ -42,7 +42,7 @@ export default function HeroSection() {
           </p>
         </Reveal>
 
-        <Reveal delay={300}>
+        <Reveal delay={300} revealOnMount>
           <div className="hero-actions">
             <a
               href="#evolution"
