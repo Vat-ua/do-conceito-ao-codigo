@@ -110,10 +110,10 @@ export default function GettingStartedSection() {
             <pre className="project-example-code-block project-example-tree">
               <code>{`liveler/
 ├── assets/
-│   ├── layout.png        # Layout da página
+│   └── layout.png        # Layout da página
+├── data/
 │   └── books.json        # Dados dos livros
-├── src/
-│   └── index.html        # HTML da página
+├── index.html            # HTML da página
 └── README.md             # Instruções do projeto`}</code>
             </pre>
           </div>
