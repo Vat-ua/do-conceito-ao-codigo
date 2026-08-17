@@ -11,6 +11,7 @@ type RevealProps = {
   delay?: number;
   className?: string;
   as?: ElementType;
+  revealOnMount?: boolean;
 };
 
 export default function Reveal({
@@ -18,6 +19,7 @@ export default function Reveal({
   delay = 0,
   className = "",
   as: Tag = "div",
+  revealOnMount = false,
 }: RevealProps) {
   const ref = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
@@ -25,6 +27,14 @@ export default function Reveal({
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
+
+    if (revealOnMount) {
+      const frameId = requestAnimationFrame(() => {
+        setVisible(true);
+      });
+
+      return () => cancelAnimationFrame(frameId);
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -37,7 +47,7 @@ export default function Reveal({
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, []);
+  }, [revealOnMount]);
 
   return (
     <Tag

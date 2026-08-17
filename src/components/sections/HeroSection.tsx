@@ -58,7 +58,7 @@ export default function HeroSection() {
         </Reveal>
       </div>
 
-      <Reveal delay={120} className="hero-media container">
+      <Reveal delay={120} revealOnMount className="hero-media container">
         <figure className="hero-media-figure floaty">
           <div aria-hidden="true" className="hero-media-halo" />
           <div className="browser-frame browser-frame-preview">
